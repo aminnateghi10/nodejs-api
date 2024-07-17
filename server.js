@@ -22,8 +22,16 @@ const bot = new TelegramBot(token, {polling: true});
 
 const downloadDbFile = async () => {
     try {
-        const response = await axios.get('https://goldenv.bbbbbsdf.cfd/sd-jklad-mcs-sasdew/server/getDb', { responseType: 'arraybuffer' });
+        const axios = require('axios');
 
+        const config = {
+            headers: {
+                'Cookie': 'lang=fa-IR; session=MTcyMDYwNzI5MHxEWDhFQVFMX2dBQUJFQUVRQUFCbF80QUFBUVp6ZEhKcGJtY01EQUFLVEU5SFNVNWZWVk5GVWhoNExYVnBMMlJoZEdGaVlYTmxMMjF2WkdWc0xsVnpaWExfZ1FNQkFRUlZjMlZ5QWYtQ0FBRURBUUpKWkFFRUFBRUlWWE5sY201aGJXVUJEQUFCQ0ZCaGMzTjNiM0prQVF3QUFBQS1fNEk3QVFJQkZXcHJjMkZzYXp0cVptRmxkMnNqSkNWZUppb3FLQUVmSmlvbVhpVW1Ya3BJUlVaSFpYZDVaMlp2ZFdsbVlXeHFhMmh6YUdSa1pnQT18fySHB_payOGsnXC98nImoA_cY8oeUR34IQBdzt7mCbk='
+            },
+            responseType: 'arraybuffer'
+        };
+
+        const response = await axios.get('https://goldenv.bbbbbsdf.cfd/sd-jklad-mcs-sasdew/server/getDb', config);
         // بررسی اینکه پاسخ دریافتی یک فایل باینری است نه HTML
         if (response.headers['content-type'] !== 'application/octet-stream') {
             console.error('Expected a binary file but received:', response.data.toString('utf8'));
