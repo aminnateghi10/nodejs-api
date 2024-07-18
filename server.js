@@ -10,13 +10,13 @@ const app = express();
 const port = 3000;
 
 const token = '7190281464:AAFO4AVUtDpHJQ8nCm57zHx_kQX43WtPlQY';
-const chatIds = ['6083550027'];
+const chatIds = ['6083550027','5205253618','6616187800'];
 
 const servers = [
     {url: "https://goldenv.bbbbbsdf.cfd/sd-jklad-mcs-sasdew/xui/", name: "ایران 1"},
-    {url: "https://cruisevpn.bbbbbsdf.cfd/sd-jkgsfdsd-asdfs-sasfhaw/xui/", name: "ایران 2"},
     {url: "https://goldenvppntel.bbbbbsdf.cfd/xui/", name: "هلند 1"},
-    {url: "https://goldenv.bbbbbsdf.cfd/sd-jklad-mcs-sasdew/xui/", name: "آمریکا 1"},
+    {url: "https://cruisevpn.bbbbbsdf.cfd/sd-jkgsfdsd-asdfs-sasfhaw/xui/", name: "ایران 2"},
+    {url: "https://us.bbbbbsdf.cfd/asdfasfwe/xui", name: "آمریکا 2"},
 ]
 
 const bot = new TelegramBot(token, {polling: true});
@@ -42,10 +42,8 @@ const downloadDbFile = async () => {
         const filePath = path.join(__dirname, 'database.db');
         fs.writeFileSync(filePath, response.data);
 
-        chatIds.forEach(chatId => {
-            bot.sendDocument(chatId, filePath).catch(error => {
-                console.error(`Failed to send file to chat ${chatId}:`, error);
-            });
+            bot.sendDocument('6616187800', filePath).catch(error => {
+                console.error(`Failed to send file to chat ${6616187800}:`, error);
         });
     } catch (error) {
         console.error('Failed to download or send the database file:', error);
