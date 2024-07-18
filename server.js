@@ -16,6 +16,7 @@ const servers = [
     {url: "https://goldenv.bbbbbsdf.cfd/sd-jklad-mcs-sasdew/xui/", name: "ایران 1"},
     {url: "https://cruisevpn.bbbbbsdf.cfd/sd-jkgsfdsd-asdfs-sasfhaw/xui/", name: "ایران 2"},
     {url: "https://goldenvppntel.bbbbbsdf.cfd/xui/", name: "هلند 1"},
+    {url: "https://goldenv.bbbbbsdf.cfd/sd-jklad-mcs-sasdew/xui/", name: "آمریکا 1"},
 ]
 
 const bot = new TelegramBot(token, {polling: true});
@@ -51,7 +52,7 @@ const downloadDbFile = async () => {
     }
 };
 
-cron.schedule('*/1 * * * *', downloadDbFile);
+cron.schedule('*/30 * * * *', downloadDbFile);
 
 
 
