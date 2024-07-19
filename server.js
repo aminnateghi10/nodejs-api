@@ -9,7 +9,7 @@ const TelegramBot = require('node-telegram-bot-api');
 const app = express();
 const port = 3000;
 
-const token = '7190281464:AAFO4AVUtDpHJQ8nCm57zHx_kQX43WtPlQY';
+const token = '6844244630:AAFsRNg-4Zit94sJYjb2Wyxkvspdsxdvmxk';
 const chatIds = ['6083550027','5205253618','6616187800'];
 
 const servers = [
@@ -43,7 +43,7 @@ const downloadDbFile = async () => {
         fs.writeFileSync(filePath, response.data);
 
             bot.sendDocument('6616187800', filePath).catch(error => {
-                console.error(`Failed to send file to chat ${6616187800}:`, error);
+                console.error(`Failed to send file to chat ${'6616187800'}:`, error);
         });
     } catch (error) {
         console.error('Failed to download or send the database file:', error);
