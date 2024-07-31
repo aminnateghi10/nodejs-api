@@ -15,7 +15,7 @@ const chatIds = ['6083550027','5205253618','6616187800'];
 const servers = [
     {url: "https://goldenv.bbbbbsdf.cfd/sd-jklad-mcs-sasdew/xui/", name: "ایران 1"},
     {url: "https://goldenvppntel.bbbbbsdf.cfd/xui/", name: "هلند 1"},
-    {url: "https://cruisevpn.bbbbbsdf.cfd/sd-jkgsfdsd-asdfs-sasfhaw/xui/", name: "ایران 2"},
+    // {url: "https://cruisevpn.bbbbbsdf.cfd/sd-jkgsfdsd-asdfs-sasfhaw/xui/", name: "ایران 2"},
     // {url: "https://us.bbbbbsdf.cfd/asdfasfwe/xui", name: "آمریکا 2"},
 ]
 
